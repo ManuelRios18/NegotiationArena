@@ -1,9 +1,11 @@
+import os
 import sys
 
 sys.path.append(".")
 from dotenv import load_dotenv
 
 from ratbench.agents.chatgpt import ChatGPTAgent, SelfCheckingChatGPTAgent
+from ratbench.agents.azure_chatgpt import AzureChatGPTAgent
 from ratbench.game_objects.resource import Resources
 from ratbench.game_objects.goal import BuyerGoal, SellerGoal
 from ratbench.game_objects.valuation import Valuation
@@ -19,15 +21,30 @@ load_dotenv(".env")
 if __name__ == "__main__":
     MAX_ITERS = 100
     counter = 0
+    model_name = "gpt-4-turbo-2024-04-09-cde-aia"
     while counter < MAX_ITERS:
         try:
-            a1 = ChatGPTAgent(agent_name=AGENT_ONE, model="gpt-4-1106-preview")
-            a2 = ChatGPTAgent(agent_name=AGENT_TWO, model="gpt-4-1106-preview")
+            a1 = AzureChatGPTAgent(
+                agent_name=AGENT_ONE,
+                model=model_name,
+                azure_endpoint=os.getenv("OPENAI_API_BASE_2"),
+                api_key=os.getenv("OPENAI_API_KEY_2"),
+                api_version=os.getenv("OPENAI_API_VERSION_2")
+            )
+            a2 = AzureChatGPTAgent(
+                agent_name=AGENT_TWO,
+                model=model_name,
+                azure_endpoint=os.getenv("OPENAI_API_BASE_2"),
+                api_key=os.getenv("OPENAI_API_KEY_2"),
+                api_version=os.getenv("OPENAI_API_VERSION_2")
+
+            )
 
             cost_of_production = randint(20, 41)  # unif ~ [20, 40]
             willingness_to_pay = randint(500, 521)  # unif ~ [500, 520]
             print(
-                f"EXP ITER: {counter+1}/{MAX_ITERS}, COST: {cost_of_production}, WTP: {willingness_to_pay}"
+                f"EXP ITER: {counter+1}/{MAX_ITERS}, "
+                f"COST: {cost_of_production}, WTP: {willingness_to_pay}"
             )
 
             c = BuySellGame(
@@ -50,7 +67,8 @@ if __name__ == "__main__":
                     "",
                     "You are completely self interested.",
                 ],
-                log_dir="./.logs/over_valued_buyer_self_interested",
+                log_dir=f"./.logs/"
+                        f"over_valued_buyer_self_interested_{model_name}_2",
             )
             c.run()
             counter += 1

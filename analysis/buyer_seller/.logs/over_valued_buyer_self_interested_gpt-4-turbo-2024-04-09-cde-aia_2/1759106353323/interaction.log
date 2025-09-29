@@ -1,0 +1,77 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 37 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 37 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 517 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 517 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I am offering 1 unit of X for 50 ZUP. Let me know if this is acceptable or if you'd like to negotiate further.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 50
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 37 ZUP to produce the resources
+reason: As the first proposal, I will set an initial asking price higher than my production cost to see if Player BLUE is willing to pay a premium for the resource.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I appreciate the offer! Could we consider a slightly lower price at 45 ZUP for 1 unit of X? This would allow me to manage my resources more efficiently.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 45
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 517 ZUP for the resources.
+reason: Although the initial offer from Player RED is quite favorable and well below my maximum willingness to pay, it's standard practice to negotiate to potentially reduce the cost even further.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for the counteroffer. How about we meet in the middle at 48 ZUP for 1 unit of X? This price should still be manageable for both of us.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 48
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 37 ZUP to produce the resources
+reason: The counteroffer from Player BLUE is lower than my initial proposal but still above my production cost. I can counter slightly to meet in the middle while still making a profit.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: Meeting in the middle sounds good! How about a slight adjustment to 46 ZUP for 1 unit of X? This could be a fair compromise for both of us.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 46
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 517 ZUP for the resources.
+reason: The counteroffer of 48 ZUP is still very reasonable and well within my budget. However, attempting one more slight reduction could be beneficial before potentially settling.
+proposal count: 2
+
+Current Iteration: 5
+Turn: 0
+message: Accepting the offer at 46 ZUP for 1 unit of X sounds like a fair compromise. I'm glad we could reach an agreement.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 37 ZUP to produce the resources
+reason: Player BLUE has proposed a further compromise at 46 ZUP, which is still above my production cost and is a fair middle ground. Accepting this offer would ensure a profitable transaction without extensive negotiation.
+proposal count: 3
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 37 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 517 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 46
+player_valuation: [{'X': 37}, {'X': 517}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 46}), Resources(resource_dict={'ZUP': 954, 'X': 1})]
+player_outcome: [9, 471]

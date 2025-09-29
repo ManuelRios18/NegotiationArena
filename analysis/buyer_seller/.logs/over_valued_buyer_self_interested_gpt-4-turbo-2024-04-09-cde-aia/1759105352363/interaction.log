@@ -1,0 +1,38 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 23 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 23 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 508 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 508 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hi Player BLUE, I'm offering one unit of resource X, which cost me 23 ZUP to produce. I am looking for 30 ZUP in return to cover production costs and gain some profit. Let's discuss if this works for you or if we need to adjust the terms.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 23 ZUP to produce the resources
+reason: As Player RED, I want to initiate the trading process by proposing a starting price that would allow me to recover the production cost and potentially gain profit. I will start with a higher proposal to leave room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Thank you for your proposal. I understand your costs, but I would like to propose 27 ZUP for the resource. This still covers your production cost and gives a profit, but it would make the deal more suitable for my budget. Let's see if this works for you.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 27
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 508 ZUP for the resources.
+reason: The initial proposal from Player RED is to buy the resource X for 30 ZUP. Considering my maximum willingness to pay is up to 508 ZUP and the seller's cost is 23 ZUP, the price of 30 ZUP is reasonable. However, as a negotiating tactic, I propose a slightly lower price to see if there's flexibility and to potentially save resources while still reaching an agreeable deal.
+proposal count: 1
+
+------------------ 

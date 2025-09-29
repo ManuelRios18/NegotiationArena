@@ -1,0 +1,67 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 31 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 31 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 514 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 514 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hi Player BLUE, I'm offering one unit of resource X. Considering the production costs, I'm proposing a price of 35 ZUP. Let me know if this works for you or if you have a counteroffer.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 35
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 31 ZUP to produce the resources
+reason: I am initiating the game by proposing a trade that tries to cover the production cost of my resource, X. I'm starting with an asking price that allows room for negotiation but also aims to recover at least the production costs.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Thanks for the offer! Considering the current market conditions, I would like to counter with 30 ZUP for the unit of X. Does this work for you?
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: ZUP: 1000
+my goals: Buy resources with <ZUP>. You are willing to pay at most X: 514 ZUP for the resources.
+reason: The initial offer from Player RED is 35 ZUP for one unit of X. This is well below the maximum of 514 ZUP I am willing to pay. However, it is in my interest to negotiate for a lower price to maximize my remaining resources.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your counteroffer. To meet halfway, how about we settle at 33 ZUP for the unit of X? This price would help cover the production costs and seems fair considering current market conditions. Please let me know your thoughts.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 33
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 31 ZUP to produce the resources
+reason: The counteroffer from Player BLUE is below my production cost, which is not ideal. I'll propose a slightly reduced price from my initial offer but still above my production cost to attempt to reach a middle ground.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: Thank you for the negotiation. I accept the offer of 33 ZUP for one unit of X. Looking forward to finalizing this deal!
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with <ZUP>. You are willing to pay at most X: 514 ZUP for the resources.
+reason: Player RED has proposed a compromise of 33 ZUP, which is still well below my maximum willingness to pay. It's a reasonable counteroffer, and by accepting, I secure the resource needed without using up too much of my resources. This leaves me with ample ZUP for future transactions or needs.
+proposal count: 2
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 31 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 514 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 33
+player_valuation: [{'X': 31}, {'X': 514}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 33}), Resources(resource_dict={'ZUP': 967, 'X': 1})]
+player_outcome: [2, 481]

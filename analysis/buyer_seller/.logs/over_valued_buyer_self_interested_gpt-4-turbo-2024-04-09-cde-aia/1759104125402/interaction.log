@@ -1,0 +1,71 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 34 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 34 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 509 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 509 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hello Player BLUE, I would like to propose a trade where I give you 1 X in exchange for 34 ZUP. This covers the production cost of the resource. Looking forward to your response!
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 34
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 34 ZUP to produce the resources
+reason: Initiating the trade with an opening proposal that aims to cover the production cost of the resource.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Thank you for the proposal. I understand the cost involved in your production. However, I would like to propose a slightly adjusted trade where I give you 30 ZUP for the 1 X. This should still cover a significant part of your costs while fitting better into my budget allocations. Looking forward to your thoughts!
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. I am willing to pay at most 509 ZUP for the resources.
+reason: 
+The initial proposal from Player RED is for 34 ZUP which is well below my maximum willingness to pay of 509 ZUP. However, it's prudent to negotiate a slightly better deal without revealing my maximum threshold at this stage. Proposing a slightly lower amount might still be acceptable to Player RED while saving resources for any possible future needs.
+
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your proposal, Player BLUE. I appreciate your consideration of the costs. I understand your budget constraints and propose a middle ground of 32 ZUP for 1 X. This would help in covering more of the production costs while still considering your budget. Hope this works for you!
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 32
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 34 ZUP to produce the resources
+reason: Considering Player BLUE's proposal of 30 ZUP which is slightly below my production cost. I would like to counter-propose a middle ground that slightly reduces my initial ask but still aims to cover more of my production cost.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: Thank you for the compromise, Player RED. I accept your proposal of 32 ZUP for 1 X. I believe this is a fair middle ground that respects both our positions. Looking forward to finalizing this trade and possibly working together in the future!
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. I am willing to pay at most 509 ZUP for the resources.
+reason: 
+Player RED has proposed a compromise by adjusting the price to 32 ZUP. This is closer to their initial proposal but still below my maximum willingness to pay. It's a reasonable middle ground that doesn't significantly impact my resource pool while allowing me to secure the resource I need.
+
+proposal count: 2
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 34 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 509 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 32
+player_valuation: [{'X': 34}, {'X': 509}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 32}), Resources(resource_dict={'ZUP': 968, 'X': 1})]
+player_outcome: [-2, 477]

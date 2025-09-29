@@ -1,0 +1,67 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 37 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 37 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 508 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 508 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I am offering 1 unit of resource X for 40 ZUP. Considering the production cost, this price offers a fair return. Let me know your thoughts or counter-offer.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 37 ZUP to produce the resources
+reason: I need to recover at least the production cost of 37 ZUP to make a profit. Starting the trade proposal slightly higher to leave room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I appreciate your initial offer, but I'd like to propose a revised trade of 30 ZUP for 1 unit of resource X. This adjustment better aligns with my budget considerations while still providing you with a solid return, considering market conditions and demand. Looking forward to your response!
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 508 ZUP for the resources.
+reason: The initial offer from Player RED is for 40 ZUP for 1 unit of resource X. This price is well below my maximum willingness to pay (508 ZUP). However, I will attempt to propose a slightly lower price to optimize my expenditure while maintaining a reasonable offer.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your proposal. I understand your budget constraints, however, 30 ZUP is below my production cost. I propose a middle ground of 35 ZUP for 1 unit of X. This should help cover my costs while considering your budget. Let's work together to finalize this deal.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 35
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 37 ZUP to produce the resources
+reason: The counter-offer of 30 ZUP is below my production cost, which would result in a loss. I need to propose a compromise that is closer to my original asking price but still gives some ground to facilitate a deal.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: I agree to the proposed price of 35 ZUP for 1 unit of resource X. This strikes a fair balance and I'm happy to finalize the deal at this rate. Looking forward to future cooperation!
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 508 ZUP for the resources.
+reason: Player RED has countered with 35 ZUP, which remains well below my maximum willingness to pay. This price is a reasonable middle ground, close to the initial proposal, and still offers a good deal considering the budget and goals. Accepting this would ensure securing the resource without further negotiation risks and still save a significant amount of ZUP.
+proposal count: 2
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 37 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 508 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 35
+player_valuation: [{'X': 37}, {'X': 508}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 35}), Resources(resource_dict={'ZUP': 965, 'X': 1})]
+player_outcome: [-2, 473]

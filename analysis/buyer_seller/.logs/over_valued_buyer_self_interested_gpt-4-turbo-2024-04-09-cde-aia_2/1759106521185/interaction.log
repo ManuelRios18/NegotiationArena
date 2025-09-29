@@ -1,0 +1,68 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 23 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 23 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 510 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 510 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I'm offering you 1 unit of X, which cost me 23 ZUP to produce. I propose a trade where you give me 30 ZUP for it. Let's negotiate a fair price for both of us.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 23 ZUP to produce the resources
+reason: As the first proposal, I want to set a starting point for the negotiation, aiming for a profitable return above my production cost to cover expenses and potentially generate profit.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I appreciate the offer. Considering the production cost and market conditions, how about 25 ZUP for 1 unit of X? I believe this could be a good starting point for our negotiation.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 25
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 510 ZUP for the resources.
+reason: The initial offer from Player RED is 30 ZUP for 1 unit of X. While it is above their cost of production, it is significantly below my maximum willingness to pay. However, I will propose a lower amount closer to their cost to begin negotiations and see if there is room for further reduction.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your proposal. How about we meet halfway from my initial offer? I propose 28 ZUP for 1 unit of X. This price would better reflect the value and effort put into producing it.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 28
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 23 ZUP to produce the resources
+reason: The counteroffer of 25 ZUP is slightly above my production cost, but it offers only a minimal profit margin. I would like to propose a price closer to my initial ask to ensure a more substantial return on my investment.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: I see your point about the effort and value. Let's settle a bit more favorably for both sides. Would 26 ZUP work for you for 1 unit of X? It's a bit closer to your recent proposal yet still mindful of costs.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 26
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 510 ZUP for the resources.
+reason: Player RED has countered with 28 ZUP, moving closer to their initial offer but still below my maximum willingness to pay. To continue negotiations and try to secure a better deal, I will counter with a slightly higher offer than my last but still below their current proposal.
+proposal count: 2
+
+Current Iteration: 5
+Turn: 0
+message: I appreciate your understanding and willingness to negotiate. To finalize our agreement on a positive note, how about we settle at 27 ZUP for 1 unit of X? This price allows for a fair compromise between our positions.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 27
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 23 ZUP to produce the resources
+reason: The offer of 26 ZUP is closer to my target and provides a reasonable profit margin above the production costs. However, I would like to attempt one final negotiation to push slightly closer to my previous proposal, aiming for a balanced trade that is beneficial yet fair.
+proposal count: 3
+
+------------------ 

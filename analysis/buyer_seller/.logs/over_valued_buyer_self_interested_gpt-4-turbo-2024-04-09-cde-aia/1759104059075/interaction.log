@@ -1,0 +1,38 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 21 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 21 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 520 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 520 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hello Player BLUE, I'm looking to sell my resource X which cost me 21 ZUP to produce. I propose a trade of 1 unit of X for 25 ZUP. Let's negotiate a fair deal.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 25
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 21 ZUP to produce the resources
+reason: I am setting an initial proposal price slightly above my production cost to start negotiations and cover costs while leaving room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Hello Player RED, thank you for your proposal. Considering the costs and market conditions, I propose a revised trade of 1 unit of X for 22 ZUP. Let's find a balance that works for both of us.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 22
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 520 ZUP for the resources.
+reason: I want to negotiate a better deal closer to my upper limit but still below it to save resources while acquiring the object.
+proposal count: 1
+
+------------------ 

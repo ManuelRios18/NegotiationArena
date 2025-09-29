@@ -1,0 +1,87 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 39 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 39 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 511 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 511 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: To start our negotiation, I'm proposing that I give you 1 unit of X for 45 ZUP. This price covers my production costs and includes a reasonable profit margin. Let's discuss further and come to a beneficial agreement.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 45
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 39 ZUP to produce the resources
+reason: As I'm beginning the negotiation, I'll start by setting a proposal that covers my production costs and includes a profit margin. This will give room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I appreciate your initial proposal. To better align with our budget considerations, I'd like to counter-propose a price of 30 ZUP for 1 unit of X. Let's find a balance that works for both of us.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 511 ZUP for the resources.
+reason: The initial proposal from Player RED is significantly lower than my maximum willingness to pay, which is 511 ZUP for one unit of X. However, there is an opportunity to negotiate a better deal, potentially getting the price even lower to conserve resources while reaching an agreement. I will propose a counter-offer that is closer to the middle ground but still under my maximum willingness to pay.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your counter-proposal. Considering the production costs of 39 ZUP for the resource, I propose a revised amount of 42 ZUP for 1 unit of X. This price not only covers the production costs but also ensures a fair profit margin. I hope this meets your budget considerations more closely.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 42
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 39 ZUP to produce the resources
+reason: The counter-proposal from Player BLUE of 30 ZUP is below my production costs. I need to propose a higher price to at least cover my costs and aim for a slight profit, making the negotiation beneficial for both parties.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: Thank you for the transparency regarding production costs. I propose 38 ZUP for 1 unit of X, moving closer to your costs while still respecting our budget constraints. I believe this is a fair middle ground that benefits both parties.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 38
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 511 ZUP for the resources.
+reason: Player RED's revised proposal of 42 ZUP is closer to their stated production cost of 39 ZUP, which suggests they are seeking a minimal profit margin. Given my maximum willingness to pay is still significantly higher, I have room to increase my offer slightly while still aiming for a cost-effective purchase. I will propose a slightly higher amount to move closer to their asking price, but still keep some negotiating space.
+proposal count: 2
+
+Current Iteration: 5
+Turn: 0
+message: I appreciate our ongoing negotiation and your move towards my production costs. In consideration of both our positions, I propose 40 ZUP for 1 unit of X. This covers my production costs and allows a minimal profit to make the transaction worthwhile for both of us. I believe this is a fair compromise.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 39 ZUP to produce the resources
+reason: The new proposal of 38 ZUP is still below my production cost. To make the deal viable for me, I need to propose a price that at least covers my costs. I will counter-propose with a minimal profit over the production cost to try and close the deal.
+proposal count: 3
+
+Current Iteration: 6
+Turn: 1
+message: I agree that 40 ZUP for 1 unit of X is a fair compromise that respects both our positions. I accept this proposal. Looking forward to finalizing this deal and possibly working together in the future.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 511 ZUP for the resources.
+reason: Player RED's latest offer of 40 ZUP is quite reasonable and close to my previous proposal. It covers their production costs and allows for a minimal profit. This amount is well within my maximum willingness to pay and seems to be a fair compromise for both parties. Accepting this offer would secure the resource at a reasonable price, concluding the negotiation amicably and efficiently.
+proposal count: 3
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 39 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 511 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+player_valuation: [{'X': 39}, {'X': 511}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 40}), Resources(resource_dict={'ZUP': 960, 'X': 1})]
+player_outcome: [1, 471]

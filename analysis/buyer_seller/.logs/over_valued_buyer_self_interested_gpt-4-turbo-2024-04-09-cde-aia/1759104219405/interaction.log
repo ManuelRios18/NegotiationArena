@@ -1,0 +1,57 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 24 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 24 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 510 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 510 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I am offering one unit of resource X. Given the production costs, I believe a fair starting proposal would be 30 ZUP. Let's discuss any adjustments you deem necessary!
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 30
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 24 ZUP to produce the resources
+reason: I am initiating the trade by proposing to sell my resource X, which I need to sell to recoup my production costs. I will start by proposing a slightly higher price to leave room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I appreciate your initial proposal. Considering the value of the resource, I propose adjusting the trade to 300 ZUP for the one unit of X. Please let me know your thoughts or if there's any flexibility on this.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 300
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 510 ZUP for the resources.
+reason: The initial offer from Player RED is considerably lower than my maximum willingness to pay (510 ZUP). However, starting the negotiation with a counteroffer slightly lower than my maximum willingness can be beneficial to reach an optimal trade. I propose increasing the offer to 300 ZUP to see if Player RED finds this acceptable or counters with a reasonable offer closer to my upper limit.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: I'm pleased with your generous offer of 300 ZUP for one unit of X. I accept this proposal, and I look forward to finalizing this trade with you. Thank you for the straightforward and favorable negotiation.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 24 ZUP to produce the resources
+reason: The counteroffer from Player BLUE is significantly higher than expected, suggesting a strong interest or valuation of the resource X. While this offer is favorable, it's important to ensure it's a reasonable and balanced trade to maintain good trading relations. I will accept this proposal as it greatly exceeds my production costs and investment recovery needs.
+proposal count: 2
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 24 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 510 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 300
+player_valuation: [{'X': 24}, {'X': 510}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 300}), Resources(resource_dict={'ZUP': 700, 'X': 1})]
+player_outcome: [276, 210]

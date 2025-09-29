@@ -1,0 +1,67 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 20 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 20 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 502 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 502 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I have an object X available for sale, which cost me 20 ZUP to produce. I propose a trade where I give you X in exchange for 25 ZUP. This price includes my production costs and a reasonable profit margin. Let me know if this works for you or if you have a different offer in mind!
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 25
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 20 ZUP to produce the resources
+reason: Starting the negotiation by proposing a price slightly higher than production cost to cover costs and earn some profit.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Thank you for your offer! Considering the production cost you mentioned, I'd like to propose a counter-offer where I cover your production costs exactly. How does 20 ZUP sound, which matches the cost you incurred for X? Let's find a mutually beneficial agreement.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 20
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 502 ZUP for the resources.
+reason: The current proposal from RED is significantly lower than my maximum willingness to pay which is 502 ZUP for X. However, I aim to negotiate a better deal to save resources while ensuring acquisition of X.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your counter-offer. While I appreciate the consideration for my production costs, I would need to make a slight profit to sustain my business. How about we settle at 23 ZUP for X? This would cover my costs and provide a modest profit for my efforts. I hope this is a reasonable compromise.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 23
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 20 ZUP to produce the resources
+reason: The counter-offer from Player BLUE only covers my production costs, without any profit. I need to propose a slightly higher amount to ensure a profit margin.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: Thank you for the consideration on the price adjustment. I agree that 23 ZUP is a fair compromise that respects both your production costs and need for profit. Let's finalize at 23 ZUP for X.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 502 ZUP for the resources.
+reason: The new proposal of 23 ZUP is still well below my maximum willingness to pay. It's a reasonable increment from my last offer of 20 ZUP, factoring in the seller's need for profit. Accepting this offer could close the deal efficiently, saving time and proposals for possibly more strategic negotiations in the future.
+proposal count: 2
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 20 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 502 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 23
+player_valuation: [{'X': 20}, {'X': 502}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 23}), Resources(resource_dict={'ZUP': 977, 'X': 1})]
+player_outcome: [3, 479]
