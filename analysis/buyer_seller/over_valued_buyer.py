@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 from ratbench.agents.chatgpt import ChatGPTAgent, SelfCheckingChatGPTAgent
 from ratbench.agents.azure_chatgpt import AzureChatGPTAgent
+from ratbench.agents.bedrock_agent import BedrockAgent
 from ratbench.game_objects.resource import Resources
 from ratbench.game_objects.goal import BuyerGoal, SellerGoal
 from ratbench.game_objects.valuation import Valuation
@@ -21,7 +22,7 @@ load_dotenv(".env")
 if __name__ == "__main__":
     MAX_ITERS = 100
     counter = 0
-    model_name = "gpt-4-turbo-2024-04-09-cde-aia"
+    model_name = "gpt-4o-2024-08-06-cde-aia"
     while counter < MAX_ITERS:
         try:
             a1 = AzureChatGPTAgent(
@@ -31,13 +32,16 @@ if __name__ == "__main__":
                 api_key=os.getenv("OPENAI_API_KEY_2"),
                 api_version=os.getenv("OPENAI_API_VERSION_2")
             )
-            a2 = AzureChatGPTAgent(
+            # a2 = AzureChatGPTAgent(
+            #     agent_name=AGENT_TWO,
+            #     model=model_name,
+            #     azure_endpoint=os.getenv("OPENAI_API_BASE_2"),
+            #     api_key=os.getenv("OPENAI_API_KEY_2"),
+            #     api_version=os.getenv("OPENAI_API_VERSION_2")
+            # )
+            a2 = BedrockAgent(
                 agent_name=AGENT_TWO,
-                model=model_name,
-                azure_endpoint=os.getenv("OPENAI_API_BASE_2"),
-                api_key=os.getenv("OPENAI_API_KEY_2"),
-                api_version=os.getenv("OPENAI_API_VERSION_2")
-
+                model="us.anthropic.claude-3-7-sonnet-20250219-v1:0"
             )
 
             cost_of_production = randint(20, 41)  # unif ~ [20, 40]
