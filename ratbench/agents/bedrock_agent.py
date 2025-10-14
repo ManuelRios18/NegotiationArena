@@ -15,7 +15,7 @@ class BedrockAgent(Agent):
         **kwargs
     ) -> None:
         super().__init__(agent_name)
-        self.model_name = model
+        self.model = model
         self.temperature = temperature
         self.max_tokens = max_tokens
 
@@ -70,7 +70,7 @@ class BedrockAgent(Agent):
             inference_config["maxTokens"] = max_tokens
 
         kwargs = {
-            "modelId": self.model_name,
+            "modelId": self.model,
             "messages": messages,
             "inferenceConfig": inference_config,
         }
