@@ -1,11 +1,12 @@
 import os
 import sys
-
+import json
 sys.path.append(".")
 from dotenv import load_dotenv
 
 from ratbench.agents.chatgpt import ChatGPTAgent, SelfCheckingChatGPTAgent
 from ratbench.agents.azure_chatgpt import AzureChatGPTAgent
+from ratbench.agents.vertex_agent import VertexAgent
 from ratbench.agents.bedrock_agent import BedrockAgent
 from ratbench.game_objects.resource import Resources
 from ratbench.game_objects.goal import BuyerGoal, SellerGoal
@@ -23,6 +24,9 @@ if __name__ == "__main__":
     MAX_ITERS = 100
     counter = 0
     model_name = "gpt-4o-2024-08-06-cde-aia"
+    with open(os.environ["GOOGLE_APPLICATION_CREDENTIALS"], "r",
+              encoding="utf-8") as f:
+        google_json_creds = json.load(f)
     while counter < MAX_ITERS:
         try:
             a1 = AzureChatGPTAgent(
@@ -39,10 +43,15 @@ if __name__ == "__main__":
             #     api_key=os.getenv("OPENAI_API_KEY_2"),
             #     api_version=os.getenv("OPENAI_API_VERSION_2")
             # )
-            a2 = BedrockAgent(
+            a2 = VertexAgent(
                 agent_name=AGENT_TWO,
-                model="us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+                model="gemini-2.0-flash-lite",
+                google_json_creds=google_json_creds
             )
+            # a2 = BedrockAgent(
+            #     agent_name=AGENT_TWO,
+            #     model="us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+            # )
 
             cost_of_production = randint(20, 41)  # unif ~ [20, 40]
             willingness_to_pay = randint(500, 521)  # unif ~ [500, 520]
