@@ -33,7 +33,7 @@ class VertexAgent(Agent):
         agent_name: str,
         model: str,
         temperature: float = 0.7,
-        max_tokens: int = 400,
+        max_tokens: int = 10000,
         google_json_creds: dict = None,
         **kwargs
     ) -> None:

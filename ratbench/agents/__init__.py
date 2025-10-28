@@ -1,3 +1,4 @@
+from .agents import Agent
 from .chatgpt import ChatGPTAgent
 from .azure_chatgpt import AzureChatGPTAgent
 from .claude import ClaudeAgent

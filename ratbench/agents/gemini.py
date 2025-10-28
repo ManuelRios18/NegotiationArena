@@ -17,7 +17,7 @@ class GeminiAgent(Agent):
         self,
         model="gemini-pro",
         temperature=0.7,
-        max_tokens=400,
+        max_tokens=4000,
         seed=None,
         **kwargs
     ):

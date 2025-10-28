@@ -1,0 +1,47 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 26 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 26 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 506 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 506 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I am proposing to sell the object for 40 ZUP, which accounts for production cost and ensures a reasonable profit margin.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+my resources: X: 1
+my goals: Sell resources for <ZUP>. It costed X: 26 ZUP to produce the resources
+reason: I want to start the negotiation at a profitable price point. Since it cost me 26 ZUP to produce, I would ideally want to sell it for more than that to make a profit.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I accept your proposal. This seems like a fair price for the resource.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with <ZUP>. You are willing to pay at most X: 506 ZUP for the resources.
+reason: The proposed price of 40 ZUP for 1 X is well below my maximum willingness to pay of 506 ZUP. This is a very favorable trade for me, allowing me to acquire the resource at a low cost and still have ample ZUP remaining.
+proposal count: 1
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 26 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 506 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+player_valuation: [{'X': 26}, {'X': 506}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 40}), Resources(resource_dict={'ZUP': 960, 'X': 1})]
+player_outcome: [14, 466]

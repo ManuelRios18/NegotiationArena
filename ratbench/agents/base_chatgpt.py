@@ -13,8 +13,8 @@ class BaseOpenAIAgent(Agent):
             self,
             agent_name: str,
             model: str,
-            temperature: float =0.7,
-            max_tokens: int =400,
+            temperature: float = 0.7,
+            max_tokens: int = 1000,
             seed=None,
             **kwargs
     ):

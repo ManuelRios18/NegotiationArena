@@ -10,7 +10,7 @@ class BedrockAgent(Agent):
         agent_name: str,
         model: str,
         temperature: float = 0.7,
-        max_tokens: int = 400,
+        max_tokens: int = 8000,
         region: str = "us-east-1",
         **kwargs
     ) -> None:

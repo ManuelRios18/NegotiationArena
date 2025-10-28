@@ -1,0 +1,28 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 26 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 26 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 516 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 516 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I am offering the object X for 40 ZUP. It cost me 26 ZUP to produce, so this offer ensures a reasonable profit margin.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 26 ZUP to produce the resources
+reason: I want to ensure I make a profit on the sale. I will start by proposing a trade where Player BLUE gives 40 ZUP. This gives me a profit margin over my production cost.
+proposal count: 1
+
+------------------ 

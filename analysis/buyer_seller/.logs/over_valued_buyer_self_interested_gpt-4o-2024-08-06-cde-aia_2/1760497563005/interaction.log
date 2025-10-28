@@ -1,0 +1,53 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 20 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: 
+	player_roles: You are Player RED.
+	player_valuation: X: 20 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 513 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are completely self interested.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 513 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: I am looking to sell my resource X that cost me 20 ZUP to produce. I propose you give me 25 ZUP for it, allowing me a small profit margin.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 25
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 20 ZUP to produce the resources
+reason: I want to at least cover the cost of production, which was 20 ZUP. Ideally, I would like to make a profit. Therefore, I will propose a trade starting at 25 ZUP to ensure I have a margin for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: l count> 1 </proposal count>
+<my resources> ZUP: 1000 </my resources>
+<my goals> Buy resources with <ZUP>. You are willing to pay at most X: 513 ZUP for the resources. </my goals>
+<reason> The other player has proposed to sell X for 25 ZUP. My willingness to pay for X is 513 ZUP. This is a very good deal for me, as it is significantly below my maximum willingness to pay. Accepting this trade allows me to acquire the resource at a low cost. </reason>
+<player answer> ACCEPT </player answer>
+<newly proposed trade> NONE </newly proposed trade>
+
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with <ZUP>. You are willing to pay at most X: 513 ZUP for the resources.
+reason: The other player has proposed to sell X for 25 ZUP. My willingness to pay for X is 513 ZUP. This is a very good deal for me, as it is significantly below my maximum willingness to pay. Accepting this trade allows me to acquire the resource at a low cost.
+proposal count: 1
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 20 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 513 ZUP for the resources.]
+initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 25
+player_valuation: [{'X': 20}, {'X': 513}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 25}), Resources(resource_dict={'ZUP': 975, 'X': 1})]
+player_outcome: [5, 488]
